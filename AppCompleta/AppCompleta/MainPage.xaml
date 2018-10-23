@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="AppCompleta.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppCompleta"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:AppCompleta.Models"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView>
+            <NavigationView.Header>
+                <NavigationViewItem Margin="20"/>
+            </NavigationView.Header>
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Name="Financial" Icon="Home" Content="Financial" PointerPressed="Financial_PointerPressed"/>
+                <NavigationViewItem x:Name="Food" Icon="Favorite" Content="Food" PointerPressed="Food_PointerPressed"/>
+            </NavigationView.MenuItems>
+        </NavigationView>
+        <Frame x:Name="MyFrame" HorizontalAlignment="Left" Margin="330,65,0,0" VerticalAlignment="Top" Height="925" Width="1170">
+        </Frame>
+
+    </Grid>
+</Page>
