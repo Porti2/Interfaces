@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="App_Gimnasio.AltaCliente"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App_Gimnasio"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <RelativePanel>
+            <StackPanel Orientation="Horizontal" Margin="20,20,-860,-100" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TextBlock Text="Nuevo Cliente" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,-261,0" Height="51" VerticalAlignment="Top"/>
+            </StackPanel>
+
+            <StackPanel x:Name="Customer" Margin="20,105,20,-65" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+                <TextBox x:Name="NombreyApellidos" Header= "Nombre y Apellidos" Margin="0,24,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBox x:Name="NumeroTelefono" Header="Número deTelefono" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="TelephoneNumber" />
+                <TextBlock Text="Sexo" Margin="0,24,0,0"/>
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:Name="Masculino" Margin="5,0,0,0" Content="Masculino" />
+                    <RadioButton x:Name="Femenino" Margin="5,0,0,0" Content="Femenino" />
+                </StackPanel>
+                <TextBox x:Name="Dirección" Header="Dirección" PlaceholderText="Dirección" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="AlphanumericFullWidth" />
+                <RelativePanel>
+                    <TextBox x:Name="Ciudad" PlaceholderText="Ciudad" Margin="0,24,0,0" MaxLength="50" Width="200" HorizontalAlignment="Left" InputScope="Text" />
+                    <ComboBox x:Name="Provincia" PlaceholderText="Provincia" Margin="24,24,0,0"  Width="120" RelativePanel.RightOf="Ciudad">
+                        <x:String>Almería</x:String>
+                        <x:String>Granada</x:String>
+                        <x:String>Málaga</x:String>
+                        <x:String>Sevilla</x:String>
+                    </ComboBox>
+                </RelativePanel>
+                <TextBox x:Name="CodigoPostal" PlaceholderText="Código Postal" Margin="0,24,0,0" MaxLength="6" Width="120" HorizontalAlignment="Left" InputScope="Number" />
+            </StackPanel>
+            <StackPanel x:Name="Associate" Margin="20,105,20,115" RelativePanel.RightOf="Customer">
+                <TextBox x:Name="DNI" Header= "DNI" Margin="0,24,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="Number"/>
+                <TextBox x:Name="Email" Header="Correo Electrónico" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+                <DatePicker x:Name="FechaNacimiento" Header="Fecha de Nacimiento" HorizontalAlignment="Left" Margin="0,24,0,0"></DatePicker>
+                <ToggleSwitch x:Name="Pago" Header="Pagado" Margin="0,24,0,0" OffContent="No" OnContent="Si"/>
+            </StackPanel>
+            <Button x:Name="Alta" Content="Añadir" Width="840" Height="50" HorizontalAlignment="Left" Margin="20,600,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Alta_Click"/>
+        </RelativePanel>
+    </Grid>
+</Page>
