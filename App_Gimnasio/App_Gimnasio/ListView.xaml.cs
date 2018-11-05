@@ -25,7 +25,7 @@ namespace App_Gimnasio
         public ListView()
         {
             this.InitializeComponent();
-            MyFrame.Navigate(typeof(Entrenadores));
+            MyFrame.Navigate(typeof(AltaEntrenador));
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
