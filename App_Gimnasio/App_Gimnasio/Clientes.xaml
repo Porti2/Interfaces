@@ -9,21 +9,56 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="listClientes" VerticalContentAlignment="Stretch" SelectionChanged="listClientes_SelectionChanged" HorizontalAlignment="Stretch" Margin="0,0,0,50" VerticalAlignment="Stretch">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Vertical" Padding="5">
-                        <TextBlock Text="{Binding Nombre}" Foreground="Black" FontWeight="Bold" FontSize="24" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding DNI}" Foreground="Black" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding Telefono}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding Correo}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding Direccion}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding Ciudad}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
-                        <TextBlock Text="***********************************" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/imagenfondo3.jpg" Opacity="0.5">
+            </ImageBrush>
+        </Grid.Background>
+        
+        <RelativePanel>
+            <ListView Name="listClientes"
+                      SelectionMode="Single"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.IsVerticalRailEnabled="True"
+                      ScrollViewer.VerticalScrollMode="Enabled"
+                      ScrollViewer.HorizontalScrollMode="Enabled"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ScrollViewer.IsHorizontalRailEnabled="True"
+                      SelectionChanged="listClientes_SelectionChanged"
+                      Margin="20">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="10,0,0,10">
+                            <TextBlock Text="Foto" Width="100" Foreground="DarkRed" FontWeight="Bold"/>
+                            <TextBlock Text="Nombre" Width="200" Foreground="DarkRed" FontWeight="Bold"/>
+                            <TextBlock Text="DNI" Width="100" Foreground="DarkRed" FontWeight="Bold"/>
+                            <TextBlock Text="Telefono" Width="100" Foreground="DarkRed" FontWeight="Bold"/>
+                            <TextBlock Text="Correo" Width="200" Foreground="DarkRed" FontWeight="Bold"/>
+                            <TextBlock Text="Direccion" Width="120" Foreground="DarkRed" FontWeight="Bold"/>
+                            <TextBlock Text="Ciudad" Width="100" Foreground="DarkRed" FontWeight="Bold"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" >
+                            <Ellipse x:Name="FromEllipse" Height="80" Width="80" Margin="0,15,0,15">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="Assets/5.png" />
+                                </Ellipse.Fill>
+                            </Ellipse>
+
+                            <TextBlock Text="{Binding Nombre}" Margin="15,40,0,0" Width="200" FontWeight="Bold" Foreground="Black" />
+                            <TextBlock Text="{Binding DNI}" Margin="0,40,0,0" Width="100" Foreground="Black"/>
+                            <TextBlock Text="{Binding Telefono}" Margin="0,40,0,0" Width="100" FontWeight="Bold" Foreground="Black"/>
+                            <TextBlock Text="{Binding Correo}" Margin="0,40,0,0" Width="200" Foreground="Black"/>
+                            <TextBlock Text="{Binding Direccion}" Margin="0,40,0,0" Width="120" Foreground="Black"/>
+                            <TextBlock Text="{Binding Ciudad}" Margin="0,40,00,0" Width="100" Foreground="Black"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativePanel>
 
         <CommandBar Background="DimGray" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="48">
             <CommandBar.CommandBarOverflowPresenterStyle>
