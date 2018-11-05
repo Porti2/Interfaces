@@ -12,7 +12,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/imagenfondo1.jpg" Opacity="0.6"/>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/imagenfondo1.jpg" Opacity="0.5"/>
         </Grid.Background>
 
         <RelativePanel>
