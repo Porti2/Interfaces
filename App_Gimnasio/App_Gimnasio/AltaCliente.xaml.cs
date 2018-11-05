@@ -65,7 +65,7 @@ namespace App_Gimnasio
                 }
                 else
                 {
-                    conex.Insert(new EntrenadoresB()
+                    conex.Insert(new ClientesB()
                     {
                         Nombre = nombre,
                         DNI = Convert.ToInt32(dni),

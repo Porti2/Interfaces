@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App_Gimnasio.Models
 {
-    class ClientesB
+    public class ClientesB
     {
         [PrimaryKey, AutoIncrement]
 

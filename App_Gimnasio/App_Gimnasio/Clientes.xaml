@@ -9,19 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="listEntrenadores" VerticalContentAlignment="Stretch" SelectionChanged="listEntrenadores_SelectionChanged" HorizontalAlignment="Stretch" Margin="0,0,0,50" VerticalAlignment="Stretch">
+        <ListView x:Name="listClientes" VerticalContentAlignment="Stretch" SelectionChanged="listClientes_SelectionChanged" HorizontalAlignment="Stretch" Margin="0,0,0,50" VerticalAlignment="Stretch">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" Padding="5">
-                        <StackPanel Orientation="Vertical" Padding="5">
-                            <TextBlock Text="{Binding Nombre}" Foreground="Black" FontWeight="Bold" FontSize="24" Margin="20,20,0,0"/>
-                            <TextBlock Text="{Binding DNI}" Foreground="Black" FontSize="20" Margin="20,20,0,0"/>
-                            <TextBlock Text="{Binding Telefono}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                            <TextBlock Text="{Binding Correo}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
-                            <TextBlock Text="{Binding Direccion}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
-                            <TextBlock Text="{Binding Ciudad}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
-                            <TextBlock Text="***********************************" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
-                        </StackPanel>
+                        <TextBlock Text="{Binding Nombre}" Foreground="Black" FontWeight="Bold" FontSize="24" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding DNI}" Foreground="Black" FontSize="20" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding Telefono}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding Correo}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding Direccion}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding Ciudad}" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
+                        <TextBlock Text="***********************************" Foreground="Black" FontSize="18" Margin="20,20,0,0"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -38,7 +36,7 @@
                 <AppBarButton x:Name="Buscar" Icon="Share" Label="Share" Foreground="White"/>
                 <AppBarButton x:Name="Añadir" Icon="Add" Label="Añadir" Foreground="White" Click="Añadir_Click"/>
                 <AppBarButton x:Name="Editar" Icon="Edit" Label="Editar" Foreground="White"/>
-                <AppBarButton x:Name="Borrar" Icon="Cancel" Label="Borrar" Foreground="White" Click="Borrar_Click"/>
+                <AppBarButton x:Name="Borrar" Icon="Delete" Label="Borrar" Foreground="White" Click="Borrar_Click"/>
             </CommandBar.PrimaryCommands>
         </CommandBar>
 

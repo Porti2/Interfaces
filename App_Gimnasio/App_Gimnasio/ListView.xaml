@@ -86,7 +86,7 @@
     </Page.Resources>
 
     <Grid>
-        <SplitView x:Name="MySplitView" IsPaneOpen="True"
+        <SplitView x:Name="MySplitView" IsPaneOpen="False"
                    OpenPaneLength="250" CompactPaneLength="48" DisplayMode="CompactInline">
             <SplitView.Pane>
                 <Grid Background="DimGray">
@@ -98,17 +98,17 @@
                         <!--<RadioButton x:Name="Home" Style="{StaticResource HamburguerRadioButtonStyle}"
                                      Content="Home" Tag="" Checked="Home_Checked"/>-->
                         <RadioButton x:Name="Entrenadores" Style="{StaticResource HamburguerRadioButtonStyle}"
-                                     Content="Entrenadores" Tag="" Checked="Entrenadores_Checked"/>
+                                     Content="Entrenadores" Tag="" Checked="Entrenadores_Checked"/>
                         <RadioButton x:Name="AñadirEntrenador" Style="{StaticResource HamburguerRadioButtonStyle}"
-                                     Content="Añadir Entrenador" Tag="" Checked="AñadirEntrenador_Checked"/>
+                                     Content="Añadir Entrenador" Tag="" Checked="AñadirEntrenador_Checked"/>
                         <RadioButton x:Name="Clientes" Style="{StaticResource HamburguerRadioButtonStyle}"
-                                     Content="Clientes" Tag="" Checked="Clientes_Checked"/>
+                                     Content="Clientes" Tag="" Checked="Clientes_Checked"/>
                         <RadioButton x:Name="AñadirCliente" Style="{StaticResource HamburguerRadioButtonStyle}"
-                                     Content="Añadir Clientes" Tag="" Checked="AñadirCliente_Checked"/>
+                                     Content="Añadir Clientes" Tag="" Checked="AñadirCliente_Checked"/>
                         <RadioButton x:Name="Ajustes" Style="{StaticResource ResourceKey=HamburguerRadioButtonStyle}"
-                                     Content="Ajustes" Tag="&#xE80F;" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                     Content="Ajustes" Tag="" Margin="0,0,0,0" VerticalAlignment="Center"/>
                         <RadioButton x:Name="Acerca" Style="{StaticResource ResourceKey=HamburguerRadioButtonStyle}"
-                                     Content="Acerca de" Tag="&#xE80F;"/>
+                                     Content="Acerca de" Tag=""/>
                     </StackPanel>
 
                 </Grid>

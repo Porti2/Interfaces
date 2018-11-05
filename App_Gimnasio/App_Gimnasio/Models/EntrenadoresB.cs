@@ -24,7 +24,6 @@ namespace App_Gimnasio.Models
         public String Direccion { get; set; }
 
         public String Ciudad { get; set; }
-
         
     }
 }

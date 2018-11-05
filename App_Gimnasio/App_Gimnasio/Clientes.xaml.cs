@@ -40,7 +40,7 @@ namespace App_Gimnasio
         public void GetClientes()
         {
             Cliente = new List<ClientesB>();
-            var query = conex.Table<EntrenadoresB>();
+            var query = conex.Table<ClientesB>();
             foreach (var data in query)
             {
                 Cliente.Add(new ClientesB
@@ -54,14 +54,14 @@ namespace App_Gimnasio
                     Ciudad = data.Ciudad
                 });
             }
-            listEntrenadores.ItemsSource = null;
-            listEntrenadores.ItemsSource = Cliente;
+            listClientes.ItemsSource = null;
+            listClientes.ItemsSource = Cliente;
 
         }
 
-        private void listEntrenadores_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void listClientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            EntrenadoresB selected = (EntrenadoresB)listEntrenadores.SelectedItem;
+            ClientesB selected = (ClientesB)listClientes.SelectedItem;
             if (selected != null)
             {
                 dni = selected.DNI;
@@ -73,14 +73,14 @@ namespace App_Gimnasio
         {
             conex.RunInTransaction(() =>
             {
-                var p = conex.Execute("DELETE FROM EntrenadoresB WHERE DNI = ?", dni);
+                var p = conex.Execute("DELETE FROM ClientesB WHERE DNI = ?", dni);
             });
             GetClientes();
         }
 
         private void Añadir_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AltaEntrenador));
+            Frame.Navigate(typeof(AltaCliente));
         }
     }
 }
